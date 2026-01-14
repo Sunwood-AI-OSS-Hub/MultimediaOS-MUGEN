@@ -2,7 +2,11 @@
 
 <img src="assets/header.png" alt="MultimediaOS CC Header" width="800"/>
 
+# MultimediaOS CC ～M.U.G.E.N.～
+
 ### マルチメディア制作のためのオペレーティングシステム - Claude Code Edition
+
+**M.U.G.E.N.** = **M**ultimedia **U**nlimited **G**eneration **E**ngine **N**exus
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-View-success?style=flat-square&logo=github)](https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace)
@@ -245,7 +249,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 <div align="center">
 
-**MultimediaOS CC** - 創造性を解き放つ、AI搭載のマルチメディア制作環境
+**MultimediaOS CC ～M.U.G.E.N.～** - 創造性を解き放つ、AI搭載のマルチメディア制作環境
 
 Made with ? by [Sunwood-ai-labs](https://github.com/Sunwood-ai-labs)
 
