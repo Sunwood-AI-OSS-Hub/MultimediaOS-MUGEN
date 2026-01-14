@@ -2,7 +2,11 @@
 
 <img src="assets/header.png" alt="MultimediaOS CC Header" width="800"/>
 
+# MultimediaOS CC ～M.U.G.E.N.～
+
 ### マルチメディア制作のためのオペレーティングシステム - Claude Code Edition
+
+**M.U.G.E.N.** = **M**ultimedia **U**nlimited **G**eneration **E**ngine **N**exus
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-View-success?style=flat-square&logo=github)](https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace)
@@ -21,24 +25,7 @@
 
 単なるツールセットではなく、創造的な作業を効率化するための**統合プラットフォーム**。
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    MultimediaOS                         │
-├─────────────────────────────────────────────────────────┤
-│  CLI Shell (Claude Code)                                │
-│  ┌─────────┬─────────┬─────────┬─────────────────┐     │
-│  │  Image  │  Video  │  Edit   │   Projects      │     │
-│  │  Gen    │  Gen    │  Image  │   Manager       │     │
-│  └─────────┴─────────┴─────────┴─────────────────┘     │
-│           └───────────────┬───────────────────┘         │
-│                           ▼                             │
-│              AI Engine (fal.ai API)                     │
-│              ┌─────────┬─────────┬─────────┐           │
-│              │  Qwen   │  LTX-2  │  LTX-2  │           │
-│              │ Image   │ Video   │ 19B     │           │
-│              └─────────┴─────────┴─────────┘           │
-└─────────────────────────────────────────────────────────┘
-```
+<img src="assets/architecture.svg" alt="MultimediaOS CC Architecture" width="800"/>
 
 ### OSとしての機能
 
@@ -262,7 +249,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 <div align="center">
 
-**MultimediaOS CC** - 創造性を解き放つ、AI搭載のマルチメディア制作環境
+**MultimediaOS CC ～M.U.G.E.N.～** - 創造性を解き放つ、AI搭載のマルチメディア制作環境
 
 Made with ? by [Sunwood-ai-labs](https://github.com/Sunwood-ai-labs)
 
