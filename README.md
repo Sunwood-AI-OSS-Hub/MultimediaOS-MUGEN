@@ -9,7 +9,7 @@
 **M.U.G.E.N.** = **M**ultimedia **U**nlimited **G**eneration **E**ngine **N**exus
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub](https://img.shields.io/badge/GitHub-View-success?style=flat-square&logo=github)](https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace)
+[![GitHub](https://img.shields.io/badge/GitHub-View-success?style=flat-square&logo=github)](https://github.com/Sunwood-ai-labs/MultimediaOS-MUGEN)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![fal.ai](https://img.shields.io/badge/fal.ai-API-purple?style=flat-square)](https://fal.ai)
 
@@ -19,7 +19,7 @@
 
 ---
 
-## ? What is MultimediaOS?
+## What is MultimediaOS?
 
 **MultimediaOS CC**（Claude Code Edition）は、マルチメディア制作のための**オペレーティングシステム**です。
 
@@ -40,9 +40,7 @@
 
 ## ✨ Features
 
-<div align="center">
-
-### ? Image Generation
+### Image Generation
 
 テキストから高品質な画像を生成。
 
@@ -51,13 +49,14 @@
 - 正確なテキスト描画
 - 16:9ワイドスクリーン対応
 
-```bash
-/fal-ai generate-image "A serene Japanese garden at sunset" --size landscape_16_9
+```
+「夕日の山脈の画像を作って」
+「A serene Japanese garden at sunsetの画像を」
 ```
 
 ---
 
-### ? Video Production
+### Video Production
 
 画像から動く動画を自動生成。
 
@@ -66,16 +65,14 @@
 - カメラ移動の制御
 - 音声付き動画生成対応
 
-```bash
-/fal-ai image-to-video photo.jpg --duration 5 --fps 24
-
-# 音声付き動画
-/fal-ai image-to-video-audio photo.jpg --prompt "Camera slowly zooms in"
+```
+「この写真から5秒の動画を作って」
+「写真をズームインする動画にして」
 ```
 
 ---
 
-### ? Image Editing
+### Image Editing
 
 既存の画像を自然言語で編集。
 
@@ -84,15 +81,16 @@
 - 編集の強さを調整可能
 - 自然な結果
 
-```bash
-/fal-ai edit-image photo.jpg "Make the sky blue and add clouds"
+```
+「この写真の空を青くして」
+「画像を編集して、くっきりさせる」
 ```
 
 </div>
 
 ---
 
-## ? Architecture
+## Architecture
 
 ```
 MultimediaOS/
@@ -124,7 +122,7 @@ MultimediaOS/
 
 ---
 
-## ? Installation
+## Installation
 
 ### Requirements
 
@@ -138,8 +136,8 @@ MultimediaOS/
 1. **リポジトリをクローン**
 
 ```bash
-git clone https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace.git
-cd fal-ai-multimedia-workspace
+git clone https://github.com/Sunwood-ai-labs/MultimediaOS-MUGEN.git
+cd MultimediaOS-MUGEN
 ```
 
 2. **APIキーを設定**
@@ -167,24 +165,18 @@ claude
 
 ---
 
-## ? Usage
+## Usage
 
 ### CLIから実行
 
 MultimediaOSは、Claude CodeのCLIから操作できます。
 
-```bash
-# 画像生成
-/fal-ai generate-image "A futuristic city at night" --size landscape_16_9
-
-# 画像編集
-/fal-ai edit-image assets/photo.jpg "Change the mood to cyberpunk"
-
-# 動画生成
-/fal-ai image-to-video outputs/images/generated/photo.png --duration 5
-
-# 音声付き動画
-/fal-ai image-to-video-audio photo.jpg --prompt "Cinematic pan from left to right"
+```
+「サイバーパンクな夜の街の画像を作って」
+「Qwen Image 2512で、夕日の山脈の画像を作って」
+「この写真をサイバーパンク風に編集して」
+「LTX-2で、この写真から5秒の動画を作って」
+「写真を左から右にパンする動画にして」
 ```
 
 ### プロジェクト管理
@@ -199,7 +191,7 @@ cd projects/my-new-project
 
 ---
 
-## ? Models
+## Models
 
 | Model | Type | Description |
 |:------|:-----|:-----------|
@@ -210,7 +202,7 @@ cd projects/my-new-project
 
 ---
 
-## ? Roadmap
+## Roadmap
 
 - [ ] プロジェクト管理コマンドの追加
 - [ ] プロンプトテンプレートシステム
@@ -220,7 +212,7 @@ cd projects/my-new-project
 
 ---
 
-## ? Contributing
+## Contributing
 
 私たちと一緒にMultimediaOSを向上させましょう！
 
@@ -232,13 +224,13 @@ cd projects/my-new-project
 
 ---
 
-## ? License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## ? Acknowledgments
+## Acknowledgments
 
 - [fal.ai](https://fal.ai) - API提供
 - [Claude Code](https://claude.com/claude-code) - コーディングアシスタント
@@ -251,10 +243,10 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 **MultimediaOS CC ～M.U.G.E.N.～** - 創造性を解き放つ、AI搭載のマルチメディア制作環境
 
-Made with ? by [Sunwood-ai-labs](https://github.com/Sunwood-ai-labs)
+Made with ❤️ by [Sunwood-ai-labs](https://github.com/Sunwood-ai-labs)
 
-[GitHub](https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace) •
-[Issues](https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace/issues) •
-[Discussions](https://github.com/Sunwood-ai-labs/fal-ai-multimedia-workspace/discussions)
+[GitHub](https://github.com/Sunwood-ai-labs/MultimediaOS-MUGEN) •
+[Issues](https://github.com/Sunwood-ai-labs/MultimediaOS-MUGEN/issues) •
+[Discussions](https://github.com/Sunwood-ai-labs/MultimediaOS-MUGEN/discussions)
 
 </div>
