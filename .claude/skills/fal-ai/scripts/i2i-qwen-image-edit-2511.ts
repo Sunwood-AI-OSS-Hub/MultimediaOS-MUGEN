@@ -29,11 +29,12 @@ import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 
-// .envファイルを読み込む
-dotenv.config();
-
+// .envファイルを読み込む（プロジェクトルートから）
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, "../../../../");
+const envPath = path.resolve(projectRoot, ".env");
+dotenv.config({ path: envPath });
 
 // 環境変数からAPIキーを取得
 const FAL_KEY = process.env.FAL_KEY;
@@ -169,14 +170,13 @@ async function editImage(options: EditImageOptions) {
     // 画像のアップロード（必要な場合）
     const imageUrl = await uploadImage(options.imageUrl);
 
-    const result = await fal.subscribe("fal-ai/qwen-image-edit-2511/lora", {
+    const result = await fal.subscribe("fal-ai/qwen-image-edit-2511", {
       input: {
-        image_url: imageUrl,
+        image_urls: [imageUrl],
         prompt: options.prompt,
         negative_prompt: options.negativePrompt || "",
-        strength: options.strength || 0.8,
         num_inference_steps: options.numInferenceSteps || 28,
-        guidance_scale: options.guidanceScale || 4,
+        guidance_scale: options.guidanceScale || 4.5,
         seed: options.seed,
         enable_safety_checker: options.enableSafetyChecker !== false,
         output_format: options.outputFormat || "png"
