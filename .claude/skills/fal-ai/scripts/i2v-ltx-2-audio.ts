@@ -33,11 +33,12 @@ import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 
-// .envファイルを読み込む
-dotenv.config();
-
+// .envファイルを読み込む（プロジェクトルートから）
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, "../../../../");
+const envPath = path.resolve(projectRoot, ".env");
+dotenv.config({ path: envPath });
 
 // 環境変数からAPIキーを取得
 const FAL_KEY = process.env.FAL_KEY;
@@ -229,13 +230,9 @@ async function generateVideo(options: ImageToVideoAudioOptions) {
       prompt: options.prompt || "Continue the scene naturally, maintaining the same style and motion.",
       num_frames: options.numFrames || 121,
       video_size: options.videoSize || "auto",
-      generate_audio: options.generateAudio !== false,
-      use_multiscale: options.useMultiscale !== false,
-      fps: options.fps || 25,
-      loras: [{
-        path: "",
-        scale: 1
-      }]
+      generate_audio: true,
+      use_multiscale: true,
+      fps: options.fps || 25
     };
 
     // オプションパラメータを追加
@@ -249,7 +246,7 @@ async function generateVideo(options: ImageToVideoAudioOptions) {
     if (options.videoQuality) input.video_quality = options.videoQuality;
     if (options.videoWriteMode) input.video_write_mode = options.videoWriteMode;
 
-    const result = await fal.subscribe("fal-ai/ltx-2-19b/distilled/image-to-video/lora", {
+    const result = await fal.subscribe("fal-ai/ltx-2-19b/distilled/image-to-video", {
       input,
       logs: true,
       onQueueUpdate: (update) => {
@@ -284,10 +281,14 @@ async function generateVideo(options: ImageToVideoAudioOptions) {
     console.log(`  音声: ${options.generateAudio !== false ? "あり" : "なし"}`);
 
     return result;
-  } catch (error) {
+  } catch (error: any) {
     console.error("\n✗ エラーが発生しました:");
     if (error instanceof Error) {
       console.error(error.message);
+      // エラー詳細を表示
+      if (error.body && error.body.detail) {
+        console.error("詳細:", JSON.stringify(error.body.detail, null, 2));
+      }
     }
     throw error;
   }
